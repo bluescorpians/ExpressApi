@@ -1,10 +1,10 @@
 const express=require('express');
-const love = require("../controller/products");
-const productAPI = express.Router();
+const love = require("../controller/user");
+const userAPI = express.Router();
 
 
 
-productAPI
+userAPI
   .post("/", love.createProduct)
   .get("/", love.showProducts)
   .get("/:id", love.singleProduct)
@@ -12,4 +12,4 @@ productAPI
   .patch("/:id", love.patchProducts)
   .delete("/:id", love.deleteProducts);
 
-  exports.landkk=productAPI;
+  exports.userAPI=userAPI;
